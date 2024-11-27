@@ -1,0 +1,62 @@
+apiVersion: apps.nvidia.com/v1alpha1
+kind: NIMCache
+metadata:
+  name: meta-llama3-8b-instruct
+spec:
+  source:
+    ngc:
+      modelPuller: nvcr.io/nim/meta/llama-3.1-8b-instruct:1.1.2
+      pullSecret: ngc-secret
+      authSecret: ngc-api-secret
+      model:
+        engine: tensorrt_llm
+        tensorParallelism: "1"
+  storage:
+    pvc:
+      create: true
+      storageClass: rook-cephfs
+      size: "50Gi"
+      volumeAccessMode: ReadWriteMany
+  resources: {}
+---
+apiVersion: apps.nvidia.com/v1alpha1
+kind: NIMCache
+metadata:
+  name: nv-embedqa-e5-v5
+spec:
+  source:
+    ngc:
+      modelPuller: nvcr.io/nim/nvidia/nv-embedqa-e5-v5:1.1.0
+      pullSecret: ngc-secret
+      authSecret: ngc-api-secret
+      model:
+        profiles:
+        - all
+  storage:
+    pvc:
+      create: true
+      storageClass: rook-cephfs
+      size: "50Gi"
+      volumeAccessMode: ReadWriteMany
+  resources: {}
+---
+apiVersion: apps.nvidia.com/v1alpha1
+kind: NIMCache
+metadata:
+  name: nv-rerankqa-mistral-4b-v3
+spec:
+  source:
+    ngc:
+      modelPuller: nvcr.io/nim/nvidia/nv-rerankqa-mistral-4b-v3:1.0.2
+      pullSecret: ngc-secret
+      authSecret: ngc-api-secret
+      model:
+        profiles:
+        - all
+  storage:
+    pvc:
+      create: true
+      storageClass: rook-cephfs
+      size: "50Gi"
+      volumeAccessMode: ReadWriteMany
+  resources: {}

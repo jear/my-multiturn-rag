@@ -1,0 +1,17 @@
+k logs  -n nim-service nv-embedqa-e5-v5-job-7hjqt
+OTEL Logging handler requested, but Python logging auto-instrumentation not set up. Set OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true to enable logging auto-instrumentation.
+2024-11-26T21:18:02Z INFO: tools.nim.ngc_models - Downloading models to /model-store...
+2024-11-26T21:18:02Z INFO: tools.nim.ngc_models - 2024-11-26T21:18:02Z INFO: tools.nim.ngc_models - Runtime NIM model profile has been manually set: ea95501d4e68ce0adf88f962526d1fbac0fa64032495b6f6a421b2c37b62433f
+2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - 2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - Selected profile: ea95501d4e68ce0adf88f962526d1fbac0fa64032495b6f6a421b2c37b62433f
+2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - 2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - Profile metadata: type: ONNX
+2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - 2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - Profile metadata: precision: fp16
+2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - Traceback (most recent call last):
+2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - File "/usr/local/bin/get-model-from-ngc", line 6, in <module>
+2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - sys.exit(get_model())
+2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - File "/app/src/tools/nim/ngc_models.py", line 323, in get_model
+2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - download_model_assets(
+2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - File "/app/src/tools/nim/ngc_models.py", line 519, in download_model_assets
+2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - repo = NgcRepo(model_location)
+2024-11-26T21:18:03Z INFO: tools.nim.ngc_models - Exception: NGC_HOME and NIM_CACHE_PATH are inconsistent; NGC_HOME should point to NIM_CACHE_PATH/ngc/hub
+2024-11-26T21:18:03Z WARNING: tools.nim.ngc_models - Failed to download models to cache: Command '['/app/bin/download-models-to-cache.sh']' returned non-zero exit status 1.
+
