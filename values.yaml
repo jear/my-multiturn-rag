@@ -9,7 +9,7 @@ imagePullSecret:
   # credentials are needed.
   create: true
   username: '$oauthtoken'
-  password: "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"
+  password: ""
 
 query:
   image: nvcr.io/nvidia/aiworkflows/rag-application-multiturn-chatbot:24.08
