@@ -1,4 +1,7 @@
 # my-multiturn-rag
+
+Evaluating with labelStudio (https://labelstud.io/blog/evaluating-multi-turn-llm-chat-conversations-using-label-studio/)
+
 ```
 # On the first GPU cluster, deploy accelerated Milvus
 helm repo add zilliztech https://zilliztech.github.io/milvus-helm
